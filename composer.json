@@ -1,4 +1,7 @@
 {
 	"name": "infrajs/activelink",
-	"description": "Adds a link, which is now open, class active."
+	"description": "Adds a link, which is now open, class active.",
+	"require":{
+		"components/jquery":"~2"
+	}
 }
