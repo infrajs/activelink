@@ -1,6 +1,6 @@
 {
 	"name": "infrajs/activelink",
-	"description": "Add class active",
+	"description": "Adds a link, which is now open, class active.",
 	"authors": [{
 		"name": "itlife",
 		"email": "info@itlife-studio.ru"
