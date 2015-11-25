@@ -1,5 +1,5 @@
 <?php
-namespace itlife\activelink;
+namespace infrajs\activelink;
 global $infra;
 infra_when($infra,'onjs',function(){
 	global $infra;
