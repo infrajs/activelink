@@ -1,8 +1,9 @@
 <?php
 namespace infrajs\activelink;
-global $infra;
-infra_when($infra,'onjs',function(){
-	global $infra;
-	$infra['js'] .= $infra['require']('*activelink/activelink.js');
-    $infra['js'] .= $infra['require']('*activelink/infra.js');
+use infrajs\event\Event;
+use infrajs\view\View;
+
+Event::wheng('onjs', function () {
+	View::js('*activelink/activelink.js');
+	View::js('*activelink/infra.js');
 });
