@@ -1,5 +1,3 @@
 {
-	"activelink":{
-		"require":"-activelink/infra.php"
-	}
+	"require":"infra.php"
 }
