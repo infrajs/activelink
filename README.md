@@ -1,3 +1,6 @@
+# Подсветка открытой ссылки
+**Disclaimer:** Module is not complete and not ready for use yet.
+
 # Исользование
 После подключения доступна функция ```activelink('#selector')``` - в указанном блоке находятся ссылки с текущем адресом и добавляется им класс active
 
