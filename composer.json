@@ -1,8 +1,5 @@
 {
 	"name": "infrajs/activelink",
 	"description": "Adds a link, which is now open, class active.",
-	"license": "GPL3",
-	"require":{
-		"components/jquery":"~2"
-	}
+	"license": "GPL3"
 }
