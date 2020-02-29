@@ -1,9 +1,14 @@
-(function () {
-	window.activelink=function(div){
-		var href=location.href;
+(async () => {
+	window.activelink = async (div) => {
+		var href = location.href
 		
-		if (!div) div=document;
-		var is=false;
+		if (!div) div = document
+		var is = false
+
+		let Load = (await import('/vendor/akiyatkin/load/Load.js')).default
+		let CDN = await Load.on('import-default', '/vendor/akiyatkin/load/CDN.js')
+		await CDN.load('jquery')
+
 		$(div).find('a').removeClass('active').each(function(){
 			var a=$(this);
 			if (a.prop('href')==href) {
