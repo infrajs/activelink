@@ -5,8 +5,8 @@
 		if (!div) div = document
 		var is = false
 
-		let CDN = (await import('/vendor/akiyatkin/load/CDN.js')).default
-		await CDN.load('jquery')
+		let { CDN } = await import('/vendor/akiyatkin/load/CDN.js')
+		await CDN.on('load','jquery')
 
 		$(div).find('a').removeClass('active').each(function(){
 			var a=$(this);
