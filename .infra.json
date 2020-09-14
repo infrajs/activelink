@@ -1,5 +1,3 @@
 {
-	"require":"infra.php",
-	"dependencies":"event",
-	"js":["activelink.js","infra.js"]
+
 }

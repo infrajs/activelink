@@ -1,4 +1,5 @@
 import { Event } from '/vendor/infrajs/event/Event.js'
+import { DOM } from '/vendor/akiyatkin/load/DOM.js'
 
 Event.handler('Layer.onshow', layer => {
 	if (!layer.activelink) return;
