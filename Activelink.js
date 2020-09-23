@@ -10,7 +10,7 @@ const activate = (a, bool) => {
 	}
 }
 const check = (div) => {
-	const href = location.href	
+	const href = location.href
 	for (const a of tag(div, 'a')) {
 		let bool = (a.href === href)
 		activate(a, bool)
@@ -29,6 +29,11 @@ DOM.done('load', () => {
 })
 const Activelink = async (div) => {
 	check(div)
+	for (const a of tag(div, 'a')) {
+		a.addEventListener('click', () => {
+			a.classList.add('active')
+		})
+	}
 	divs.push(div)
 	// var href = location.href
 	
