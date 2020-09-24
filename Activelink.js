@@ -1,17 +1,16 @@
 import { DOM } from '/vendor/akiyatkin/load/DOM.js'
 
-const tag = (div, tag) => document.getElementsByTagName(tag)
+const tag = (tag, div) => div.getElementsByTagName(tag)
 const activate = (a, bool) => {
 	//Добавить надо класс к a и к родительскому li
 	const act = bool ? 'add' : 'remove'
 	a.classList[act]('active')
-	if (a.parentElement.tagName == 'LI') {
-		a.parentElement.classList[act]('active')	
-	}
+	const li = a.closest('li')
+	if (li) li.classList[act]('active')
 }
 const check = (div) => {
 	const href = location.href
-	for (const a of tag(div, 'a')) {
+	for (const a of tag('a', div)) {
 		let bool = (a.href === href)
 		activate(a, bool)
 	}
@@ -29,7 +28,7 @@ DOM.done('load', () => {
 })
 const Activelink = async (div) => {
 	check(div)
-	for (const a of tag(div, 'a')) {
+	for (const a of tag('a', div)) {
 		a.addEventListener('click', () => {
 			a.classList.add('active')
 		})
